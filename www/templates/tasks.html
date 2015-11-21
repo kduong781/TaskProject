@@ -1,0 +1,17 @@
+
+  <ion-header-bar class="bar-stable bar-balanced">
+  <button class="button buton-icon" ng-click="data.showDelete =!data.showDelete">Edit</button>
+    <h1 class="title"><a href="templates/calender.html">{{currentDay}}</a></h1>
+    <button class="button buton-icon" ng-click="addTask()">Add Task</button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list show-delete="data.showDelete" show-reorder="true">
+      <ion-item ng-repeat="task in tasks" class="item-stable">
+        {{task}}
+        <ion-reorder-button class="ion-navicon" on-reorder="swapTask(task,$fromIndex, $toIndex)"></ion-reorder-button>
+        <ion-delete-button class="ion-minus-circled"
+          ng-click="tasks.splice($index, 1)"></ion-delete-button>
+        </ion-item>
+
+    </ion-list>
+  </ion-content>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="taskCtrl">
+    <ion-nav-view>
+  <!--    <ion-pane>
+        <ion-header-bar class="bar-stable bar-balanced">
+        <button class="button buton-icon" ng-click="data.showDelete =!data.showDelete">Edit</button>
+          <h1 class="title"><a href="templates/calender.html">Saturday</a></h1>
+          <button class="button buton-icon" ng-click="addTask()">Add Task</button>
+        </ion-header-bar>
+        <ion-content>
+          <ion-list show-delete="data.showDelete" show-reorder="true">
+            <ion-item ng-repeat="task in tasks" class="item-stable">
+              {{task}}
+              <ion-reorder-button class="ion-navicon" on-reorder="swapTask(task,$fromIndex, $toIndex)"></ion-reorder-button>
+              <ion-delete-button class="ion-minus-circled"
+                ng-click="tasks.splice($index, 1)"></ion-delete-button>
+              </ion-item>
+
+          </ion-list>
+        </ion-content>
+  <!--      <ion-footer-bar class="bar-stable bar-balanced">
+          <h1 class="title">November 21, 2015</h1>
+        </ion-footer-bar>-->
+  <!--    </ion-pane> -->
+    </ion-nav-view>
+  </body>
+</html>
