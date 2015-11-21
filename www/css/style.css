@@ -10,3 +10,7 @@ ion-item {
 .splash {
   text-align: center;
 }
+ion-tabs {
+  bottom:0;
+  position: absolute;
+}
