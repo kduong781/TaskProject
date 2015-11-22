@@ -55,6 +55,15 @@ angular.module('starter', ['ionic'])
       }
     }
   })
+  .state('tabs.details', {
+    url: '/details',
+    views: {
+      'details-tab' : {
+        templateUrl: 'templates/details.html',
+        controller: 'taskCtrl'
+      }
+    }
+  })
   $urlRouterProvider.otherwise('/tab/task');
 })
 
@@ -112,6 +121,7 @@ angular.module('starter', ['ionic'])
                e.preventDefault();
              } else {
                   $scope.tasks.push($scope.tasks.info) // adds the task
+                  $scope.tasks.info = "";
                    myPopup.close();
              }
            }

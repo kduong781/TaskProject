@@ -6,8 +6,8 @@
   </ion-header-bar>
   <ion-content>
     <ion-list show-delete="data.showDelete" show-reorder="true">
-      <ion-item ng-repeat="task in tasks" class="item-stable">
-        {{task}}
+      <ion-item ng-repeat="task in tasks" class="item-stable" href="templates/details.html">
+         {{task}}
         <ion-reorder-button class="ion-navicon" on-reorder="swapTask(task,$fromIndex, $toIndex)"></ion-reorder-button>
         <ion-delete-button class="ion-minus-circled"
           ng-click="tasks.splice($index, 1)"></ion-delete-button>
